@@ -255,10 +255,8 @@ services:
     networks:
       wan:
         ipv4_address: ${RELAY_IP}
-        interface_name: wan0
         gw_priority: 1000
       hole-punch-network:
-        interface_name: redis0
         gw_priority: 100
     cap_add:
       - NET_ADMIN
@@ -272,11 +270,9 @@ ${RELAY_ENV}
     networks:
       wan:
         ipv4_address: ${DIALER_ROUTER_WAN_IP}
-        interface_name: wan0
         gw_priority: 1000
       lan-dialer:
         ipv4_address: ${DIALER_ROUTER_LAN_IP}
-        interface_name: lan0
         gw_priority: 100
     cap_add:
       - NET_ADMIN
@@ -298,11 +294,9 @@ ${DIALER_ROUTER_ENV}
     networks:
       wan:
         ipv4_address: ${LISTENER_ROUTER_WAN_IP}
-        interface_name: wan0
         gw_priority: 1000
       lan-listener:
         ipv4_address: ${LISTENER_ROUTER_LAN_IP}
-        interface_name: lan0
         gw_priority: 100
     cap_add:
       - NET_ADMIN
@@ -324,10 +318,8 @@ ${LISTENER_ROUTER_ENV}
     networks:
       lan-dialer:
         ipv4_address: ${DIALER_IP}
-        interface_name: lan0
         gw_priority: 1000
       hole-punch-network:
-        interface_name: redis0
         gw_priority: 1000
     cap_add:
       - NET_ADMIN
@@ -345,10 +337,8 @@ ${DIALER_ENV}
     networks:
       lan-listener:
         ipv4_address: ${LISTENER_IP}
-        interface_name: lan0
         gw_priority: 1000
       hole-punch-network:
-        interface_name: redis0
         gw_priority: 1000
     cap_add:
       - NET_ADMIN
@@ -392,10 +382,8 @@ services:
     networks:
       wan:
         ipv4_address: ${RELAY_IP}
-        interface_name: wan0
         gw_priority: 1000
       hole-punch-network:
-        interface_name: redis0
         gw_priority: 100
     cap_add:
       - NET_ADMIN
@@ -409,11 +397,9 @@ ${RELAY_ENV}
     networks:
       wan:
         ipv4_address: ${DIALER_ROUTER_WAN_IP}
-        interface_name: wan0
         gw_priority: 1000
       lan-dialer:
         ipv4_address: ${DIALER_ROUTER_LAN_IP}
-        interface_name: lan0
         gw_priority: 100
     cap_add:
       - NET_ADMIN
@@ -435,11 +421,9 @@ ${DIALER_ROUTER_ENV}
     networks:
       wan:
         ipv4_address: ${LISTENER_ROUTER_WAN_IP}
-        interface_name: wan0
         gw_priority: 1000
       lan-listener:
         ipv4_address: ${LISTENER_ROUTER_LAN_IP}
-        interface_name: lan0
         gw_priority: 100
     cap_add:
       - NET_ADMIN
@@ -461,10 +445,8 @@ ${LISTENER_ROUTER_ENV}
     networks:
       lan-dialer:
         ipv4_address: ${DIALER_IP}
-        interface_name: lan0
         gw_priority: 1000
       hole-punch-network:
-        interface_name: redis0
         gw_priority: 1000
     cap_add:
       - NET_ADMIN
@@ -481,10 +463,8 @@ ${DIALER_ENV}
     networks:
       lan-listener:
         ipv4_address: ${LISTENER_IP}
-        interface_name: lan0
         gw_priority: 1000
       hole-punch-network:
-        interface_name: redis0
         gw_priority: 1000
     cap_add:
       - NET_ADMIN

@@ -21,9 +21,9 @@ if [ -z "$WAN_IP" ] || [ -z "$WAN_SUBNET" ] || [ -z "$LAN_IP" ] || [ -z "$LAN_SU
     exit 1
 fi
 
-# Define interfaces
-WAN_IF="wan0"
-LAN_IF="lan0"
+# Detect interfaces by IP (interface_name requires Docker Engine v28.1+)
+WAN_IF=$(ip -o addr show | awk -v ip="${WAN_IP}" '$4 ~ ("^" ip "/") {print $2; exit}')
+LAN_IF=$(ip -o addr show | awk -v ip="${LAN_IP}" '$4 ~ ("^" ip "/") {print $2; exit}')
 
 echo "Configuration:"
 echo "  WAN Interface: $WAN_IF"
