@@ -47,7 +47,7 @@ implementations:
     source:
       type: github
       repo: vacp2p/nim-libp2p
-      commit: 39902922cf718768a18fbe07482d8ccb0a2dc351
+      commit: bfa31f8de9a07c7a6632eb3d3725cdc2e647b5c7
       dockerfile: interop/hole-punching/Dockerfile
     transports: [tcp]
     secureChannels: [noise]
